@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documentation", "documentation", "{5DAD6A52-2547-44FF-8753-087C271CF5A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{3200E181-0D6B-4EC6-B23C-D3EBD5913077}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A0A71AED-D883-465A-9F60-2E5EC512B125}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "database", "database", "{01B05796-A463-42D0-BCAA-27FC74133DF5}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BooksDataStore", "source\database\BooksDataStore\BooksDataStore.sqlproj", "{5713725A-A488-4209-8223-5F52965F04D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5713725A-A488-4209-8223-5F52965F04D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5713725A-A488-4209-8223-5F52965F04D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5713725A-A488-4209-8223-5F52965F04D9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5713725A-A488-4209-8223-5F52965F04D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5713725A-A488-4209-8223-5F52965F04D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5713725A-A488-4209-8223-5F52965F04D9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{01B05796-A463-42D0-BCAA-27FC74133DF5} = {3200E181-0D6B-4EC6-B23C-D3EBD5913077}
+		{5713725A-A488-4209-8223-5F52965F04D9} = {01B05796-A463-42D0-BCAA-27FC74133DF5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8519659-E22F-4406-A6C2-3B083812B27B}
+	EndGlobalSection
+EndGlobal
