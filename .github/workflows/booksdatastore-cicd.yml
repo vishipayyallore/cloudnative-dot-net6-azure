@@ -28,10 +28,10 @@ jobs:
       - name: create dacpac
         run: |
           & 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\msbuild.exe' BooksDataStore.sqlproj /p:Configuration=Release
-        working-directory: ./source/BooksDataStore
+        working-directory: ./source/database/BooksDataStore
 
       # Publish an artifact
       - uses: actions/upload-artifact@v2
         with:
           name: BooksDataStore
-          path: ${{ github.workspace }}/source/BooksDataStore/bin/Release/
+          path: ${{ github.workspace }}/source/database/BooksDataStore/bin/Release/
