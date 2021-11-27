@@ -36,6 +36,12 @@ jobs:
           name: BooksDataStore
           path: ${{ github.workspace }}/source/database/BooksDataStore/bin/Release/
 
+      # Login using Azure credentials
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # Use the Azure SQL Deploy Action
       - name: Azure SQL Deploy
         uses: Azure/sql-action@v1
         with:
