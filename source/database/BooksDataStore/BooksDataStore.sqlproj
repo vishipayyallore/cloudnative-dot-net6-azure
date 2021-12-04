@@ -58,8 +58,19 @@
     <Folder Include="Properties" />
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\Programmability" />
+    <Folder Include="dbo\PostDeployment" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Books.sql" />
+    <Build Include="dbo\Programmability\usp_add_book.sql" />
+    <Build Include="dbo\Programmability\usp_delete_book_by_id.sql" />
+    <Build Include="dbo\Programmability\usp_get_all_books.sql" />
+    <Build Include="dbo\Programmability\usp_get_book_by_id.sql" />
+    <Build Include="dbo\Programmability\usp_update_book_by_id.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="dbo\PostDeployment\Script.PostDeployment_Books.sql" />
+    <None Include="dbo\PostDeployment\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>
