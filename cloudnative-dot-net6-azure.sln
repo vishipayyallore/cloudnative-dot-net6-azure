@@ -34,6 +34,35 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{6E20774F-870
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.API", "source\api\Books.API\Books.API.csproj", "{1FE406B4-260D-496A-9DAD-1C30C4EF587C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{9A9F3226-5ABC-4303-ADAC-2485B8C3EA43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{4D6D93A0-3C00-465A-8D4D-DA6F45FE8AB6}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\booksdatastore-cicd.yml = .github\workflows\booksdatastore-cicd.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{21B38C9F-3645-4806-9859-1E1BD0B6115D}"
+	ProjectSection(SolutionItems) = preProject
+		Infrastructure.txt = Infrastructure.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{0B53F6F2-5AE9-4E07-B2F0-5C18E319EF17}"
+	ProjectSection(SolutionItems) = preProject
+		documentation\images\ApplicationArchitecture.PNG = documentation\images\ApplicationArchitecture.PNG
+		documentation\images\SeatBelt.PNG = documentation\images\SeatBelt.PNG
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3EED698A-0E49-423D-852E-DDD1BF1B73F0}"
+	ProjectSection(SolutionItems) = preProject
+		tests\Tests_To_Be_Done.txt = tests\Tests_To_Be_Done.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{4862E241-F850-486E-BFD9-B19A86AB971D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.Web", "source\web\Books.Web\Books.Web.csproj", "{0ABA56C6-A406-4254-975C-CB5FD2E35CD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.DataServices", "source\web\Books.DataServices\Books.DataServices.csproj", "{C8AEE593-24C2-4970-8ACA-4BCE5B5F5A88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +99,14 @@ Global
 		{1FE406B4-260D-496A-9DAD-1C30C4EF587C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FE406B4-260D-496A-9DAD-1C30C4EF587C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FE406B4-260D-496A-9DAD-1C30C4EF587C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ABA56C6-A406-4254-975C-CB5FD2E35CD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ABA56C6-A406-4254-975C-CB5FD2E35CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ABA56C6-A406-4254-975C-CB5FD2E35CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ABA56C6-A406-4254-975C-CB5FD2E35CD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8AEE593-24C2-4970-8ACA-4BCE5B5F5A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8AEE593-24C2-4970-8ACA-4BCE5B5F5A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8AEE593-24C2-4970-8ACA-4BCE5B5F5A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8AEE593-24C2-4970-8ACA-4BCE5B5F5A88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +122,11 @@ Global
 		{43AC69D1-AED3-435B-9478-D961BE921BA0} = {6E43F924-450E-4C7B-996A-19B8C55EF19E}
 		{6E20774F-870C-452D-B8D1-0C18C7889E3B} = {3200E181-0D6B-4EC6-B23C-D3EBD5913077}
 		{1FE406B4-260D-496A-9DAD-1C30C4EF587C} = {6E20774F-870C-452D-B8D1-0C18C7889E3B}
+		{4D6D93A0-3C00-465A-8D4D-DA6F45FE8AB6} = {9A9F3226-5ABC-4303-ADAC-2485B8C3EA43}
+		{0B53F6F2-5AE9-4E07-B2F0-5C18E319EF17} = {5DAD6A52-2547-44FF-8753-087C271CF5A6}
+		{4862E241-F850-486E-BFD9-B19A86AB971D} = {3200E181-0D6B-4EC6-B23C-D3EBD5913077}
+		{0ABA56C6-A406-4254-975C-CB5FD2E35CD0} = {4862E241-F850-486E-BFD9-B19A86AB971D}
+		{C8AEE593-24C2-4970-8ACA-4BCE5B5F5A88} = {4862E241-F850-486E-BFD9-B19A86AB971D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B8519659-E22F-4406-A6C2-3B083812B27B}
