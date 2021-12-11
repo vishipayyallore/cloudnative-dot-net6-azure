@@ -94,6 +94,27 @@ Code sinppet:
 
 ---
 
+## 10. Containerzing the Blazor WASM based Single Page Application
+
+> 1. Change the directory to `D:\LordKrishna\GitHub\cloudnative-dot-net6-azure\source\web`
+> 1. Execute below mentioned command to build the container
+```
+docker build -f "D:\LordKrishna\GitHub\cloudnative-dot-net6-azure\source\web\Books.Web\Dockerfile" --force-rm -t booksdemo-image "D:\LordKrishna\GitHub\cloudnative-dot-net6-azure" 
+```
+
+ ![Blazor Wasm Create Docker | 100x100](./documentation/images/BlazorWasmCreateDocker.PNG)
+
+> 1. Execute the below mentioned command to run the container
+
+```
+docker run -d -p 8091:80 --name demo-container1 booksdemo-image   
+```
+
+![Running The Books Container | 100x100](./documentation/images/RunningTheBooksContainer.PNG)
+
+---
+
+
 ## 10. SUMMARY / RECAP / Q&A
 
 > 1. SUMMARY / RECAP / Q&A
