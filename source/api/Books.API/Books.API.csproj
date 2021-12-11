@@ -4,6 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>f20bce1c-d6c3-4993-9776-0ffebde2cddf</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\common\BooksStore.Bll\BooksStore.Bll.csproj" />
+    <ProjectReference Include="..\..\common\BooksStore.CacheDal\BooksStore.CacheDal.csproj" />
     <ProjectReference Include="..\..\common\BooksStore.Core\BooksStore.Core.csproj" />
+    <ProjectReference Include="..\..\common\BooksStore.SqlDal\BooksStore.SqlDal.csproj" />
   </ItemGroup>
 
 </Project>

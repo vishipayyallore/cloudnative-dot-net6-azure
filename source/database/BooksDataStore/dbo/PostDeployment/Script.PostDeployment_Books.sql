@@ -12,14 +12,14 @@ Post-Deployment Script Template
 
 MERGE INTO [dbo].[Books] AS TARGET
 USING (VALUES 
-	(1, 'https://blob.url', 'C#', 'Sri Varu', 1, 'ISBN-101', 101),
-	(2, 'https://blob.url', 'ASP.NET Core', 'Scott Rudy', 1, 'ISBN-102', 102),
-	(3, 'https://blob.url', 'Docker', 'Krishnan Iyer', 1, 'ISBN-103', 103),
-	(4, 'https://blob.url', 'Kubernetes', 'George Reddy', 1, 'ISBN-104', 104),
-	(5, 'https://blob.url', 'PMP', 'Mithnu Nair', 1, 'ISBN-105', 105),
-	(6, 'https://blob.url', 'TypeScript', 'Mohd Hafeez', 1, 'ISBN-106', 106),
-	(7, 'https://blob.url', 'Angular', 'Nikhil Grover', 1, 'ISBN-106', 107),
-	(8, 'https://blob.url', 'Azure', 'Jagadesh Jullapalli', 1, 'ISBN-108', 108)
+	(1, '/images/books/Book1.jpg', 'C#', 'Sri Varu', 1, 'ISBN-101', 101),
+	(2, '/images/books/Book2.jpg', 'ASP.NET Core', 'Scott Rudy', 1, 'ISBN-102', 102),
+	(3, '/images/books/Book3.jpg', 'Docker', 'Krishnan Iyer', 1, 'ISBN-103', 103),
+	(4, '/images/books/Book4.jpg', 'Kubernetes', 'George Reddy', 1, 'ISBN-104', 104),
+	(5, '/images/books/Book5.jpg', 'PMP', 'Mithnu Nair', 1, 'ISBN-105', 105),
+	(6, '/images/books/Book6.jpg', 'TypeScript', 'Mohd Hafeez', 1, 'ISBN-106', 106),
+	(7, '/images/books/Book7.jpg', 'Angular', 'Nikhil Grover', 1, 'ISBN-106', 107),
+	(8, '/images/books/Book8.jpg', 'Azure', 'Jagadesh Jullapalli', 1, 'ISBN-108', 108)
 )
 AS SOURCE ([Id], [PictureUrl], [Title], [Author], [IsActive], [ISBN], [Pages])
 ON TARGET.[Id] = SOURCE.[Id]
