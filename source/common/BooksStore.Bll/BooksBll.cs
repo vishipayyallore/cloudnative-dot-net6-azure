@@ -48,7 +48,9 @@ namespace BooksStore.Bll
 
             if (!string.IsNullOrEmpty(booksFromCache))
             {
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
                 books = JsonSerializer.Deserialize<IEnumerable<Book>>(booksFromCache);
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
             }
             else
             {
@@ -63,20 +65,43 @@ namespace BooksStore.Bll
 
             _logger.LogInformation("Sending output from BooksBll::GetAllBooks() request.");
 
+#pragma warning disable CS8603 // Possible null reference return.
             return books;
+#pragma warning restore CS8603 // Possible null reference return.
         }
 
         public async Task<Book> GetBookById(int id)
         {
             _logger.LogInformation("Received the BooksBll::GetBookById(id) request.");
 
-            var book = await _bookRepository
+            Book book;
+            var bookCacheKey = $"{Constants.RedisCacheStore.SingleBookKey}{id}";
+
+            var bookFromCache = await _bookCacheRepository.RetrieveItemFromCache(bookCacheKey);
+
+            if (!string.IsNullOrEmpty(bookFromCache))
+            {
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+                book = JsonSerializer.Deserialize<Book>(bookFromCache);
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+            }
+            else
+            {
+                book = await _bookRepository
                             .GetBookById(id)
                             .ConfigureAwait(false);
 
+                _ = await _bookCacheRepository.SaveOrUpdateItemToCache(
+                        bookCacheKey,
+                        JsonSerializer.Serialize(book));
+            }
+
+
             _logger.LogInformation("Sending output from BooksBll::GetBookById(id) request.");
 
+#pragma warning disable CS8603 // Possible null reference return.
             return book;
+#pragma warning restore CS8603 // Possible null reference return.
         }
 
         private async Task RemoveAllBooksDataFromCache(string redisCacheKey)

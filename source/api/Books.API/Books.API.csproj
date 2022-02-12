@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>f20bce1c-d6c3-4993-9776-0ffebde2cddf</UserSecretsId>
+    <UserSecretsId>f20bce1c-cloudnative-dot-net6-azure</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

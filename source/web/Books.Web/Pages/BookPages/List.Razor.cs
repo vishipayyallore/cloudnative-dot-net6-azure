@@ -1,8 +1,6 @@
 ﻿using Books.Data;
 using Books.DataServices;
 using Microsoft.AspNetCore.Components;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Books.Web.Pages.BookPages
 {
