@@ -350,3 +350,7 @@ MigrationBackup/
 .ionide/
 source/api/Books.API/Properties/ServiceDependencies/app-books-api - Web Deploy/profile.arm.json
 source/web/Books.Web/Properties/ServiceDependencies/app-books-web - Web Deploy/profile.arm.json
+source/api/Books.API/Properties/ServiceDependencies/app-booksstoreapi-12feb-dev - Web Deploy/profile.arm.json
+source/api/Books.API/Properties/ServiceDependencies/app-booksstoreapi-12feb-prod - Web Deploy/profile.arm.json
+source/web/Books.Web/Properties/ServiceDependencies/app-booksstoreweb-12feb-dev - Web Deploy/profile.arm.json
+source/web/Books.Web/Properties/ServiceDependencies/app-booksstoreweb-12feb-prod - Web Deploy/profile.arm.json
